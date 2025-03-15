@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plant Care Guide</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --primary-color: #00ff7f; /* Vibrant green accent */
+      --background-color: #1e1e1e;
+      --secondary-bg: #2a2a2a;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --text-color: #e0e0e0;
+      --header-bg: #006400;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, var(--background-color), var(--secondary-bg));
+      color: var(--text-color);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    header .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--text-color);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary-color);
+    }
+
+    main {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: var(--text-color);
+    }
+
+    .plant-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: var(--text-color);
+      display: block;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: var(--text-color);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Plant Care Guide</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <!-- Additional navigation links can be added here -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="intro">
+      <h2>Welcome to Your Plant Care Companion</h2>
+      <p>Select a plant below to see detailed care instructions and tips.</p>
+    </section>
+    <section class="plant-list" id="plant-list">
+      <div class="card">
+        <a href="plants/hoya-obovata.html">
+          <h3>Hoya Obovata</h3>
+          <p>Waxy leaves & star-shaped blooms</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="plants/peperomia-obtusifolia.html">
+          <h3>Peperomia Obtusifolia</h3>
+          <p>Compact, easy-care foliage</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="plants/english-ivy.html">
+          <h3>Variegated English Ivy</h3>
+          <p>Classic trailing beauty</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="plants/ficus-pumila.html">
+          <h3>Variegated Creeping Fig</h3>
+          <p>Vibrant, climbing greenery</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="plants/croton.html">
+          <h3>Croton</h3>
+          <p>Colorful patterned leaves</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="plants/tradescantia-zebrina.html">
+          <h3>Tradescantia Zebrina</h3>
+          <p>Fast-growing trailing plant</p>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Plant Care Guide. All rights reserved.</p>
+  </footer>
+</body>
+</html>
